@@ -1,0 +1,16 @@
+.car-list {    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.car-list-item {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.car-image, .car-image > img {
+    width: 167px;
+}

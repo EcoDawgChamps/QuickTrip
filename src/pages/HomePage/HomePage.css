@@ -1,0 +1,13 @@
+.home {
+    background-image: url("../../../public/assets/background.png");
+    width: 100%;
+    height: 100vh;
+}
+
+.car-list-home {
+    position: absolute;
+    overflow-y: auto;
+    bottom: 85px;
+    height: 300px;
+    width: 100%;
+}

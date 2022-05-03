@@ -1,0 +1,59 @@
+.step-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 100px;
+    width: 60%;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dot {
+    height: 11px;
+    width: 11px;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.filled {
+    background-color: blueviolet;
+}
+
+.address-page {
+    width: 100%;
+}
+
+.list-button {
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 173px;
+    height: 52px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 625px;
+}
+
+.enabled {
+    color: white;
+    background-color: blueviolet;
+}
+
+.disabled {
+    color: lightgray;
+    background-color: gray;
+}
+
+.cal-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
