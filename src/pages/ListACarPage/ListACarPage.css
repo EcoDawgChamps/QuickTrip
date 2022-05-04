@@ -57,3 +57,20 @@
     justify-content: center;
     height: 80vh;
 }
+
+.image-container {
+    overflow-x: auto;
+    width: 100%;
+    display: flex;
+}
+
+.image-preview {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.image-preview > img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}

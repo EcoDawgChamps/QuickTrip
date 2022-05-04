@@ -17,7 +17,7 @@ const CarDetailPage = ({
     const [btnDisabled, setBtnDisabled] = useState(true);
 
     useEffect(() => {
-        setBtnDisabled(vin === "" || year === 0 || make == "" || model === "" || capacity === 0 || color === "");
+        setBtnDisabled(vin === "" || year === 0 || make === "" || model === "" || capacity === 0 || color === "");
     }, [vin, year, make, model, capacity, color])
 
     const setFinalCarDetails = () => {
@@ -62,7 +62,7 @@ const CarDetailPage = ({
             </div>
             <div>
                 <label htmlFor={"color"}>Color</label><br/>
-                <input type={"textx"} onChange={e => setColor(e.target.value)} id={"color"}/>
+                <input type={"text"} onChange={e => setColor(e.target.value)} id={"color"}/>
             </div>
             <div onClick={setFinalCarDetails} disabled={btnDisabled} className={`list-button ${btnDisabled ? "disabled" : "enabled"}`}>
                 Car Photos

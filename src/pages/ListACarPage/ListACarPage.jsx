@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import AddressPage from "./AddressPage";
 import AvailabilityPage from "./AvailabilityPage";
 import CarDetailPage from "./CarDetailPage";
+import EndPage from "./EndPage";
 import "./ListACarPage.css";
 import PhotosUploadPage from "./PhotosUploadPage";
+import SafetyPage from "./SafetyPage";
 import StepBar from "./StepBar";
 
 const ListACarPage = () => {
@@ -27,6 +29,12 @@ const ListACarPage = () => {
                 break;
             case 3:
                 setPage(<PhotosUploadPage setPhotos={setCarPhotos} setStepNum={setStepNum} stepNum={stepNum} />);
+                break;
+            case 4:
+                setPage(<SafetyPage setStepNum={setStepNum} stepNum={stepNum} />);
+                break;
+            case 5:
+                setPage(<EndPage setStepNum={setStepNum} />)
                 break;
             default:
                 setPage(<>Something Broke</>);

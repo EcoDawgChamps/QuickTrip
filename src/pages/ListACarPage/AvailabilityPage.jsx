@@ -13,7 +13,7 @@ const AvailabilityPage = ({
     const [btnDisabled, setBtnDisabled] = useState(true);
 
     useEffect(() => {
-        setBtnDisabled(dateRange.length != 2);
+        setBtnDisabled(dateRange.length !== 2);
     }, [dateRange]);
 
     const setFinalAvailability = () => {
