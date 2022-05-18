@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from "react";
 import "./ListACarPage.css";
 
@@ -37,32 +38,32 @@ const CarDetailPage = ({
     return (
         <div>
             <div>
-                <label htmlFor={"vin"}>VIN</label><br/>
-                <input type={"text"} onChange={e => setVin(e.target.value)} id={"vin"}/>
+                <label htmlFor={"vin"}>VIN</label><br />
+                <input type={"text"} onChange={e => setVin(e.target.value)} id={"vin"} />
             </div>
             <div>
-                <label htmlFor={"year"}>Year</label><br/>
-                <input type={"number"} min={1920} max={2022} onChange={e => setYear(e.target.value)} id={"year"}/>
+                <label htmlFor={"year"}>Year</label><br />
+                <input type={"number"} min={1920} max={2022} onChange={e => setYear(e.target.value)} id={"year"} />
             </div>
             <div>
-                <label htmlFor={"make"}>Make</label><br/>
-                <input type={"text"} onChange={e => setMake(e.target.value)} id={"make"}/>
+                <label htmlFor={"make"}>Make</label><br />
+                <input type={"text"} onChange={e => setMake(e.target.value)} id={"make"} />
             </div>
             <div>
-                <label htmlFor={"model"}>Model</label><br/>
-                <input type={"text"} onChange={e => setModel(e.target.value)} id={"model"}/>
+                <label htmlFor={"model"}>Model</label><br />
+                <input type={"text"} onChange={e => setModel(e.target.value)} id={"model"} />
             </div>
             <div>
-                <label htmlFor={"features"}>Features</label><br/>
-                <input type={"text"} onChange={e => setFeatures(e.target.value)} id={"features"}/>
+                <label htmlFor={"features"}>Features</label><br />
+                <input type={"text"} onChange={e => setFeatures(e.target.value)} id={"features"} />
             </div>
             <div>
-                <label htmlFor={"capacity"}>Capacity</label><br/>
-                <input type={"number"} min={1} max={10} onChange={e => setCapacity(e.target.value)} id={"capacity"}/>
+                <label htmlFor={"capacity"}>Capacity</label><br />
+                <input type={"number"} min={1} max={10} onChange={e => setCapacity(e.target.value)} id={"capacity"} />
             </div>
             <div>
-                <label htmlFor={"color"}>Color</label><br/>
-                <input type={"text"} onChange={e => setColor(e.target.value)} id={"color"}/>
+                <label htmlFor={"color"}>Color</label><br />
+                <input type={"text"} onChange={e => setColor(e.target.value)} id={"color"} />
             </div>
             <div onClick={setFinalCarDetails} disabled={btnDisabled} className={`list-button ${btnDisabled ? "disabled" : "enabled"}`}>
                 Car Photos

@@ -1,5 +1,6 @@
 import CarListItem from "./CarListItem";
 import "./car-list.css";
+import React from 'react';
 
 const CarList = () => {
     let results = [];
@@ -9,7 +10,7 @@ const CarList = () => {
 
     return (
         <div className="car-list">
-            {results.map(item => {return <CarListItem id={item}/>})}
+            {results.map(item => { return <CarListItem id={item} /> })}
         </div>
     )
 }

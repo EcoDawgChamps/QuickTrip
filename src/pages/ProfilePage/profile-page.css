@@ -1,0 +1,41 @@
+.profile-pic {
+    background-color: #5603AD;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile-button {
+    width: 80%;
+    border-bottom-style: solid;
+    border-bottom-color: lightgrey;
+    border-bottom-width: 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.profile-icon-button {
+    margin-right: 10px;
+}
+
+.profile-arrow-icon {
+    margin-left: 20px;
+}
+
+.profile-name {
+    font-weight: bold;
+    padding-top: 10px;
+    font-size: 1.2em;
+}

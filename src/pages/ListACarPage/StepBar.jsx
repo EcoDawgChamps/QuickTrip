@@ -1,4 +1,5 @@
 import "./ListACarPage.css";
+import React from 'react';
 
 const NUM_STEPS = 6;
 
@@ -6,13 +7,13 @@ const StepBar = ({
     stepNum
 }) => {
     let dots = [];
-    for(let i = 0; i < NUM_STEPS; i++) {
+    for (let i = 0; i < NUM_STEPS; i++) {
         let className = "dot";
         if (i === stepNum) {
             className += " filled"
         }
         dots.push(
-            <div className={className}/>
+            <div className={className} />
         )
     }
 

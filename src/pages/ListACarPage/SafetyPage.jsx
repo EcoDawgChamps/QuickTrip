@@ -1,4 +1,5 @@
 import "./ListACarPage.css";
+import React from 'react';
 
 const SafetyPage = ({
     setStepNum,

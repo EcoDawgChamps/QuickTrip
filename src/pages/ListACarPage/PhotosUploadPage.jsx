@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from "react";
 import "./ListACarPage.css";
 
@@ -31,18 +32,18 @@ const PhotosUploadPage = ({
     return (
         <div>
             <div>
-                <label htmlFor={"photos"}>Upload Photos</label><br/>
-                <input type={"file"} multiple onChange={uploadImagesHandler} id={"photos"}/>
+                <label htmlFor={"photos"}>Upload Photos</label><br />
+                <input type={"file"} multiple onChange={uploadImagesHandler} id={"photos"} />
                 <div className="image-container">
-                {
-                    images.length > 0 ? images.map(image => {
-                        return (
-                            <div className="image-preview">
-                                <img alt="uploaded image" src={URL.createObjectURL(image)} />
-                            </div>
-                        )
-                    }) : ""
-                }
+                    {
+                        images.length > 0 ? images.map(image => {
+                            return (
+                                <div className="image-preview">
+                                    <img alt="uploaded image" src={URL.createObjectURL(image)} />
+                                </div>
+                            )
+                        }) : ""
+                    }
                 </div>
                 <div onClick={setFinalPhotos} disabled={btnDisabled} className={`list-button ${btnDisabled ? "disabled" : "enabled"}`}>
                     Safety and Quality Standards

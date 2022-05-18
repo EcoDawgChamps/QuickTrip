@@ -10,8 +10,19 @@
     right: 5vw;
     bottom: 105px;
     border-radius: 50%;
-    background-color: #5603AD;    ;
-    width: 90px;
-    height: 90px;
+    background-color: #5603AD;
+    width: 4em;
+    height: 4em;
     box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.list-header-main {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 1em;
 }

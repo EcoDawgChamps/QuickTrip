@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from "react";
 import AddressPage from "./AddressPage";
 import AvailabilityPage from "./AvailabilityPage";
@@ -17,15 +18,15 @@ const ListACarPage = () => {
     const [page, setPage] = useState("");
 
     useEffect(() => {
-        switch(stepNum) {
+        switch (stepNum) {
             case 0:
-                setPage(<AddressPage setAddress={setAddress} setStepNum={setStepNum} stepNum={stepNum}/>);
+                setPage(<AddressPage setAddress={setAddress} setStepNum={setStepNum} stepNum={stepNum} />);
                 break;
             case 1:
                 setPage(<AvailabilityPage setAvailability={setAvailability} setStepNum={setStepNum} stepNum={stepNum} />);
                 break;
             case 2:
-                setPage(<CarDetailPage setCarDetails={setCarDetails} setStepNum={setStepNum} stepNum={stepNum}/>);
+                setPage(<CarDetailPage setCarDetails={setCarDetails} setStepNum={setStepNum} stepNum={stepNum} />);
                 break;
             case 3:
                 setPage(<PhotosUploadPage setPhotos={setCarPhotos} setStepNum={setStepNum} stepNum={stepNum} />);

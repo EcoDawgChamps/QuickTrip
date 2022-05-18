@@ -1,17 +1,16 @@
 import React from 'react';
-import "./car-list.css";
-const CarListItem = ({
+import "../trips-page.css";
+const CurrentTripsItem = ({
     id
 }) => {
     return (
         <div className="car-list-item">
             <div className="car-list-item-text">
                 <div>
-                    <div>{"Tesla Model X 2016"}</div>
-                    <div>{"4.7 * (22 Trips)"}</div>
+                    {"Tesla Model X 2016"}
                 </div>
-                <div>
-                    <div>{"$115/day"}</div>
+                <div className='text-description'>
+                    {"3 days left"}
                 </div>
             </div>
             <div className="car-image">
@@ -21,4 +20,4 @@ const CarListItem = ({
     )
 }
 
-export default CarListItem;
+export default CurrentTripsItem;
