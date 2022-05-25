@@ -8,14 +8,14 @@ import ListACarPage from './pages/ListACarPage/ListACarPage';
 import TripsPage from './pages/TripsPage/TripsPage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 import AccountSettings from './pages/ProfilePage/AccountSettingsPage';
+import CarDetailPage from './pages/CarDetailPage/CarDetailPage';
 
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path='/:listingId' element={<CarDetailPage />} /> */}
-        {/* <Route path='/chat' element={<ChatPage />} /> */}
+        <Route path='/:listingId' element={<CarDetailPage />} />
         <Route path='/listing' element={<ListingPage />} />
         <Route path='/trips' element={<TripsPage />} />
         <Route path='/profile' element={<ProfilePage />} />

@@ -6,7 +6,7 @@ const HomePage = () => {
     return (
         <div className="home">
             <div className="car-list-home">
-                <CarList />
+                <CarList id={""}/>
             </div>
 
         </div>

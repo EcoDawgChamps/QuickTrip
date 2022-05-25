@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from "react";
 import "./ListACarPage.css";
 
-const CarDetailPage = ({
+const AddCarDetailPage = ({
     setCarDetails,
     setStepNum,
     stepNum
@@ -72,4 +72,4 @@ const CarDetailPage = ({
     )
 }
 
-export default CarDetailPage;
+export default AddCarDetailPage;

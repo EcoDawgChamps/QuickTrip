@@ -1,13 +1,16 @@
-import React from 'react';
 import "./car-list.css";
+import React from "react";
+import { Link } from "react-router-dom";
 const CarListItem = ({
-    id
+    car,
+    srcURL
 }) => {
+
     return (
-        <div className="car-list-item">
+        <Link to={`/${car._id}`} className="car-list-item">
             <div className="car-list-item-text">
                 <div>
-                    <div>{"Tesla Model X 2016"}</div>
+                    <div>{`${car.year} ${car.make} ${car.model}`}</div>
                     <div>{"4.7 * (22 Trips)"}</div>
                 </div>
                 <div>
@@ -15,9 +18,9 @@ const CarListItem = ({
                 </div>
             </div>
             <div className="car-image">
-                <img alt={"tesla model x from unsplash.com"} src={"https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVzbGF8ZW58MHx8MHx8&w=1000&q=80"} />
+                <img alt={"tesla model x from unsplash.com"} src={srcURL} />
             </div>
-        </div>
+        </Link>
     )
 }
 

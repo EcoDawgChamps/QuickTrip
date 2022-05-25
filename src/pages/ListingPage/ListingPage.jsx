@@ -9,10 +9,10 @@ const ListingPage = () => {
     return (
         <div>
             <div className='list-header-main'>
-                Car Listings
+                My Listings
             </div>
             <div className="car-list-listing">
-                <CarList />
+                <CarList id={"6285c996e7a5bdb967e1f0db"}/>
             </div>
             <Link to={"/list-a-car"}>
                 <div className="fab">

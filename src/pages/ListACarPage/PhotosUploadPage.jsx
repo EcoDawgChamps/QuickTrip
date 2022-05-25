@@ -16,7 +16,6 @@ const PhotosUploadPage = ({
         for (let i = 0; i < e.target.files.length; i++) {
             newFiles.push(e.target.files.item(i));
         }
-        // console.log(newFiles);
         setImages(newFiles);
     }
 
@@ -39,7 +38,7 @@ const PhotosUploadPage = ({
                         images.length > 0 ? images.map(image => {
                             return (
                                 <div className="image-preview">
-                                    <img alt="uploaded image" src={URL.createObjectURL(image)} />
+                                    <img alt="uploaded file" src={URL.createObjectURL(image)} />
                                 </div>
                             )
                         }) : ""

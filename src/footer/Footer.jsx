@@ -1,16 +1,12 @@
 import React from 'react';
-import { useEffect, useState } from "react";
 import "./footer.css"
-import FooterItem from "./FooterItem";
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faKey, faCar, faLocationDot, faUser } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
 import Paper from '@mui/material/Paper';
-import { styled } from "@mui/material/styles";
 
 
 // const navigate = useNavigate();
@@ -23,12 +19,6 @@ const handleChange = (event, newValue) => {
 
 const Footer = () => {
     return (
-        //TODO: Relpace links w appropriate pages
-        // <div className="footer">
-        //     {LABELS.map((label, i) => {
-        //         return <FooterItem path={PATHS[i]} label={label} />
-        //     })}
-        // </div>
         <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
             <BottomNavigation
                 showLabels
