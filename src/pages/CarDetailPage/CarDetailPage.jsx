@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import 'react-calendar/dist/Calendar.css';
 import { Calendar } from 'react-calendar';
-
+import './CarDetailPage.css'
+import uploadCarData from '../ListACarPage/utils/uploadCarData';
 
 const CarDetailPage = () => {
     const params = useParams();
@@ -11,6 +12,7 @@ const CarDetailPage = () => {
     const [carFeatures, setCarFeatures] = useState("");
     const [dateRange, setDateRange] = useState([]);
     const [userInfo, setUserInfo] = useState({});
+    const [btnDisabled, setBtnDisabled] = useState(true);
 
     useEffect(() => {
         const CAR_INFO_URL = `http://localhost:3100/api/cars?carID=${id}`;
@@ -25,6 +27,25 @@ const CarDetailPage = () => {
         .catch(err => console.log(err));
     }, []);
 
+    useEffect(() => {
+        setBtnDisabled(dateRange.length !== 2);
+    }, [dateRange]);
+
+    useEffect(() => {
+        console.log(dateRange)
+    }, [dateRange]);
+
+    const reserveVehicleHandler = () => {
+        const body = {
+            renterID: "6285c996e7a5bdb967e1f0db",
+            carID: id,
+            startDate: dateRange[0],
+            endDate: dateRange[1]
+        }
+        console.log(body);
+        uploadCarData(`http://localhost:3100/api/rentals`, body);
+    }
+
     console.log(userInfo);
     return (
         <>
@@ -33,8 +54,23 @@ const CarDetailPage = () => {
             <div>{`$115/day`}</div>
             <p>{carFeatures}</p>
             <Calendar selectRange={true} onChange={setDateRange} />
-            <h2>{`Hosted by`}</h2>
-            <div>{`${userInfo.firstName} ${userInfo.lastName}`}</div>
+            <div className='host'>
+                <h2>{`Hosted by`}</h2>
+                <div>{`${userInfo.firstName} ${userInfo.lastName}`}</div>
+            </div>
+
+            {
+            userInfo._id !== `6285c996e7a5bdb967e1f0db` 
+            ? 
+                <button className={`${btnDisabled ? `disabled` : `enabled`} detail-button`} onClick={reserveVehicleHandler} disabled={btnDisabled}>
+                    {`Reserve vehicle`}
+                </button> 
+            :
+                <button className={`enabled detail-button`}>
+                    {`Edit Vehicle`}
+                </button>
+            }
+
         </>
     )
 }

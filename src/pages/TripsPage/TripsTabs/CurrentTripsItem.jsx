@@ -1,13 +1,13 @@
 import React from 'react';
 import "../trips-page.css";
 const CurrentTripsItem = ({
-    id
+    rental
 }) => {
     return (
         <div className="car-list-item">
             <div className="car-list-item-text">
                 <div>
-                    {"Tesla Model X 2016"}
+                    {`${rental.carData.year} ${rental.carData.make} ${rental.carData.model}`}
                 </div>
                 <div className='text-description'>
                     {"3 days left"}

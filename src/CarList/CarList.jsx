@@ -24,7 +24,7 @@ const CarList = ({
 
     return (
         <div className="car-list">
-            {res.map((item, i) => { return <CarListItem car={item} srcURL={srcURLs[Math.floor(Math.random() * 3)]} key={i} /> })}
+            {res.map((item, i) => { return <CarListItem car={item} srcURL={srcURLs[Math.floor(Math.random() * srcURLs.length)]} key={i} /> })}
         </div>
     )
 }

@@ -1,0 +1,20 @@
+.detail-button {
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 173px;
+    height: 45px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 550px;
+}
+
+.host {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
